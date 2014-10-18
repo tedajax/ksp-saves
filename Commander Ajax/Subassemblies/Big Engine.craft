@@ -1,0 +1,3681 @@
+ship = Big Engine
+version = 0.23.0
+description = No description.
+type = VAB
+PART
+{
+	part = largeAdapter_4292818360
+	partName = Strut
+	pos = -23.44366,29.66134,-11.30737
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 5
+	dstg = 5
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = fuelTank1-2_4292818336
+	attN = bottom,fuelTank1-2_4292818336
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292818336
+	partName = Part
+	pos = -23.44366,27.03134,-11.30737
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 5
+	dstg = 5
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = fuelTank1-2_4292818308
+	attN = top,largeAdapter_4292818360
+	attN = bottom,fuelTank1-2_4292818308
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292818308
+	partName = Part
+	pos = -23.44366,23.28134,-11.30737
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 5
+	dstg = 5
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = fuelTank1-2_4292818280
+	attN = top,fuelTank1-2_4292818336
+	attN = bottom,fuelTank1-2_4292818280
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292818280
+	partName = Part
+	pos = -23.44366,19.53134,-11.30737
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 5
+	dstg = 5
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = engineLargeSkipper_4292818252
+	link = radialDecoupler2_4292818144
+	link = radialDecoupler2_4292817464
+	link = radialDecoupler2_4292816784
+	link = radialDecoupler2_4292816104
+	link = radialDecoupler2_4292815424
+	link = radialDecoupler2_4292814744
+	attN = top,fuelTank1-2_4292818308
+	attN = bottom,engineLargeSkipper_4292818252
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = engineLargeSkipper_4292818252
+	partName = Part
+	pos = -23.44366,17.65634,-11.30737
+	rot = 0,0,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 6
+	dstg = 5
+	sidx = 0
+	sqor = 6
+	attm = 0
+	attN = top,fuelTank1-2_4292818280
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = radialDecoupler2_4292818144
+	partName = Part
+	pos = -23.44366,19.55662,-12.48484
+	rot = 0,0.7071068,0,-0.7071068
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 6
+	sidx = 0
+	sqor = 7
+	attm = 1
+	link = fuelTank1-2_4292817420
+	sym = radialDecoupler2_4292817464
+	sym = radialDecoupler2_4292816784
+	sym = radialDecoupler2_4292816104
+	sym = radialDecoupler2_4292815424
+	sym = radialDecoupler2_4292814744
+	srfN = srfAttach,fuelTank1-2_4292818280
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292817420
+	partName = Part
+	pos = -23.44366,19.46286,-14.35199
+	rot = 0,0.7071068,0,-0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank1-2_4292817392
+	link = strutConnector_4292817008
+	link = strutConnector_4292816952
+	link = strutConnector_4292816896
+	link = strutConnector_4292816840
+	sym = fuelTank1-2_4292804572
+	sym = fuelTank1-2_4292803848
+	sym = fuelTank1-2_4292803124
+	sym = fuelTank1-2_4292802400
+	sym = fuelTank1-2_4292801676
+	srfN = srfAttach,radialDecoupler2_4292818144
+	attN = bottom,fuelTank1-2_4292817392
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292817392
+	partName = Part
+	pos = -23.44366,15.71286,-14.35199
+	rot = 0,2.107343E-07,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = engineLargeSkipper_4292817364
+	link = strutConnector_4292817232
+	link = strutConnector_4292817176
+	link = strutConnector_4292817120
+	link = strutConnector_4292817064
+	sym = fuelTank1-2_4292804540
+	sym = fuelTank1-2_4292803816
+	sym = fuelTank1-2_4292803092
+	sym = fuelTank1-2_4292802368
+	sym = fuelTank1-2_4292801644
+	attN = top,fuelTank1-2_4292817420
+	attN = bottom,engineLargeSkipper_4292817364
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = engineLargeSkipper_4292817364
+	partName = Part
+	pos = -23.44366,13.83786,-14.35199
+	rot = 0,-0.5000001,0,0.8660256
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 8
+	dstg = 7
+	sidx = 1
+	sqor = 8
+	attm = 0
+	sym = engineLargeSkipper_4292804508
+	sym = engineLargeSkipper_4292803784
+	sym = engineLargeSkipper_4292803060
+	sym = engineLargeSkipper_4292802336
+	sym = engineLargeSkipper_4292801612
+	attN = top,fuelTank1-2_4292817392
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4292817232
+	partName = StrutConnector
+	pos = -22.25644,14.11982,-14.6701
+	rot = 1.10512E-07,-0.9914449,-2.961165E-08,0.1305263
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.273573,0.03168461,-0.9966; dir: -0.7873859,0.01958909,-0.6161491
+	sym = strutConnector_4292804328
+	sym = strutConnector_4292803604
+	sym = strutConnector_4292802880
+	sym = strutConnector_4292802156
+	sym = strutConnector_4292801432
+	srfN = srfAttach,fuelTank1-2_4292817392
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292817176
+	partName = StrutConnector
+	pos = -22.23609,14.9454,-14.35199
+	rot = 0,-1,0,2.107343E-07
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.563226,0.08010864,-0.3149062; dir: -0.9790721,0.05017341,-0.197232
+	sym = strutConnector_4292804268
+	sym = strutConnector_4292803544
+	sym = strutConnector_4292802820
+	sym = strutConnector_4292802096
+	sym = strutConnector_4292801372
+	srfN = srfAttach,fuelTank1-2_4292817392
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292817120
+	partName = StrutConnector
+	pos = -22.23621,15.91096,-14.35199
+	rot = 0,-1,0,2.107343E-07
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.258042,0.1004105,-0.3149009; dir: -0.9671765,0.0771936,-0.2420966
+	sym = strutConnector_4292804208
+	sym = strutConnector_4292803484
+	sym = strutConnector_4292802760
+	sym = strutConnector_4292802036
+	sym = strutConnector_4292801312
+	srfN = srfAttach,fuelTank1-2_4292817392
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292817064
+	partName = StrutConnector
+	pos = -22.26331,17.10505,-14.66826
+	rot = 5.12781E-07,-0.9914449,6.029156E-13,0.1305263
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.065592,-0.07921721,-0.9389664; dir: -0.749113,-0.05568823,-0.6600974
+	sym = strutConnector_4292804148
+	sym = strutConnector_4292803424
+	sym = strutConnector_4292802700
+	sym = strutConnector_4292801976
+	sym = strutConnector_4292801252
+	srfN = srfAttach,fuelTank1-2_4292817392
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292817008
+	partName = StrutConnector
+	pos = -22.39048,18.07629,-14.96005
+	rot = 0,-0.965926,0,0.2588191
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.5848961,-0.201973,-1.429322; dir: -0.3755311,-0.1296772,-0.9176928
+	sym = strutConnector_4292804088
+	sym = strutConnector_4292803364
+	sym = strutConnector_4292802640
+	sym = strutConnector_4292801916
+	sym = strutConnector_4292801192
+	srfN = srfAttach,fuelTank1-2_4292817420
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292816952
+	partName = StrutConnector
+	pos = -22.39672,18.83921,-14.95645
+	rot = 0,-0.965926,0,0.2588191
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.9134296,-0.05319691,-1.588959; dir: -0.4981692,-0.02901542,-0.8665941
+	sym = strutConnector_4292804028
+	sym = strutConnector_4292803304
+	sym = strutConnector_4292802580
+	sym = strutConnector_4292801856
+	sym = strutConnector_4292801132
+	srfN = srfAttach,fuelTank1-2_4292817420
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292816896
+	partName = StrutConnector
+	pos = -22.26628,19.79276,-14.66747
+	rot = 9.789001E-07,-0.9914449,-2.622955E-07,0.1305263
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.130486,0.08851898,-0.9555379; dir: -0.7623655,0.05969351,-0.6443877
+	sym = strutConnector_4292803968
+	sym = strutConnector_4292803244
+	sym = strutConnector_4292802520
+	sym = strutConnector_4292801796
+	sym = strutConnector_4292801072
+	srfN = srfAttach,fuelTank1-2_4292817420
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292816840
+	partName = StrutConnector
+	pos = -22.38904,20.90525,-14.96088
+	rot = 0,-0.965926,0,0.2588191
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.5499207,0.08756542,-1.429313; dir: -0.3584978,0.05708195,-0.9317838
+	sym = strutConnector_4292803908
+	sym = strutConnector_4292803184
+	sym = strutConnector_4292802460
+	sym = strutConnector_4292801736
+	sym = strutConnector_4292801012
+	srfN = srfAttach,fuelTank1-2_4292817420
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = radialDecoupler2_4292817464
+	partName = Part
+	pos = -24.46338,19.55662,-11.8961
+	rot = 0,0.258819,0,-0.9659259
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 6
+	sidx = 1
+	sqor = 7
+	attm = 1
+	link = fuelTank1-2_4292804572
+	sym = radialDecoupler2_4292818144
+	sym = radialDecoupler2_4292816784
+	sym = radialDecoupler2_4292816104
+	sym = radialDecoupler2_4292815424
+	sym = radialDecoupler2_4292814744
+	srfN = srfAttach,fuelTank1-2_4292818280
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292804572
+	partName = Part
+	pos = -26.08039,19.46286,-12.82967
+	rot = 0,0.2588189,0,-0.9659259
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank1-2_4292804540
+	link = strutConnector_4292804088
+	link = strutConnector_4292804028
+	link = strutConnector_4292803968
+	link = strutConnector_4292803908
+	sym = fuelTank1-2_4292817420
+	sym = fuelTank1-2_4292803848
+	sym = fuelTank1-2_4292803124
+	sym = fuelTank1-2_4292802400
+	sym = fuelTank1-2_4292801676
+	srfN = srfAttach,radialDecoupler2_4292817464
+	attN = bottom,fuelTank1-2_4292804540
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292804540
+	partName = Part
+	pos = -26.08039,15.71286,-12.82967
+	rot = 0,0.5000002,0,0.8660253
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = engineLargeSkipper_4292804508
+	link = strutConnector_4292804328
+	link = strutConnector_4292804268
+	link = strutConnector_4292804208
+	link = strutConnector_4292804148
+	sym = fuelTank1-2_4292817392
+	sym = fuelTank1-2_4292803816
+	sym = fuelTank1-2_4292803092
+	sym = fuelTank1-2_4292802368
+	sym = fuelTank1-2_4292801644
+	attN = top,fuelTank1-2_4292804572
+	attN = bottom,engineLargeSkipper_4292804508
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = engineLargeSkipper_4292804508
+	partName = Part
+	pos = -26.08039,13.83786,-12.82967
+	rot = 0,9.972052E-08,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 8
+	dstg = 7
+	sidx = 1
+	sqor = 8
+	attm = 0
+	sym = engineLargeSkipper_4292817364
+	sym = engineLargeSkipper_4292803784
+	sym = engineLargeSkipper_4292803060
+	sym = engineLargeSkipper_4292802336
+	sym = engineLargeSkipper_4292801612
+	attN = top,fuelTank1-2_4292804540
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4292804328
+	partName = StrutConnector
+	pos = -25.76227,14.11982,-14.0169
+	rot = 8.090039E-08,-0.7933533,-8.090046E-08,0.6087616
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.273556,0.03167699,-0.9965891; dir: -0.7873859,0.01958909,-0.6161491
+	sym = strutConnector_4292817232
+	sym = strutConnector_4292803604
+	sym = strutConnector_4292802880
+	sym = strutConnector_4292802156
+	sym = strutConnector_4292801432
+	srfN = srfAttach,fuelTank1-2_4292804540
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292804268
+	partName = StrutConnector
+	pos = -25.4766,14.9454,-13.87547
+	rot = 0,-0.8660253,0,0.5000002
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.563182,0.08010101,-0.3149002; dir: -0.9790721,0.05017341,-0.197232
+	sym = strutConnector_4292817176
+	sym = strutConnector_4292803544
+	sym = strutConnector_4292802820
+	sym = strutConnector_4292802096
+	sym = strutConnector_4292801372
+	srfN = srfAttach,fuelTank1-2_4292804540
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292804208
+	partName = StrutConnector
+	pos = -25.47666,15.91096,-13.87535
+	rot = 0,-0.8660253,0,0.5000002
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.258009,0.1004028,-0.3148964; dir: -0.9671765,0.0771936,-0.2420966
+	sym = strutConnector_4292817120
+	sym = strutConnector_4292803484
+	sym = strutConnector_4292802760
+	sym = strutConnector_4292802036
+	sym = strutConnector_4292801312
+	srfN = srfAttach,fuelTank1-2_4292804540
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292804148
+	partName = StrutConnector
+	pos = -25.76411,17.10505,-14.01003
+	rot = 4.440816E-07,-0.7933533,-2.5639E-07,0.6087616
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.065578,-0.07921721,-0.9389569; dir: -0.749113,-0.05568823,-0.6600974
+	sym = strutConnector_4292817064
+	sym = strutConnector_4292803424
+	sym = strutConnector_4292802700
+	sym = strutConnector_4292801976
+	sym = strutConnector_4292801252
+	srfN = srfAttach,fuelTank1-2_4292804540
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292804088
+	partName = StrutConnector
+	pos = -26.08039,18.07629,-14.04578
+	rot = 0,-0.7071068,0,0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.584894,-0.2019806,-1.429317; dir: -0.3755311,-0.1296772,-0.9176928
+	sym = strutConnector_4292817008
+	sym = strutConnector_4292803364
+	sym = strutConnector_4292802640
+	sym = strutConnector_4292801916
+	sym = strutConnector_4292801192
+	srfN = srfAttach,fuelTank1-2_4292804572
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292804028
+	partName = StrutConnector
+	pos = -26.08039,18.83921,-14.03858
+	rot = 0,-0.7071068,0,0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.9134196,-0.05320454,-1.588945; dir: -0.4981692,-0.02901542,-0.8665941
+	sym = strutConnector_4292816952
+	sym = strutConnector_4292803304
+	sym = strutConnector_4292802580
+	sym = strutConnector_4292801856
+	sym = strutConnector_4292801132
+	srfN = srfAttach,fuelTank1-2_4292804572
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292803968
+	partName = StrutConnector
+	pos = -25.76491,19.79276,-14.00706
+	rot = 7.166045E-07,-0.7933533,-7.166046E-07,0.6087615
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.130471,0.08851898,-0.9555268; dir: -0.7623655,0.05969351,-0.6443877
+	sym = strutConnector_4292816896
+	sym = strutConnector_4292803244
+	sym = strutConnector_4292802520
+	sym = strutConnector_4292801796
+	sym = strutConnector_4292801072
+	srfN = srfAttach,fuelTank1-2_4292804572
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292803908
+	partName = StrutConnector
+	pos = -26.08039,20.90525,-14.04745
+	rot = 0,-0.7071068,0,0.7071069
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.5499198,0.08756542,-1.429312; dir: -0.3584978,0.05708195,-0.9317838
+	sym = strutConnector_4292816840
+	sym = strutConnector_4292803184
+	sym = strutConnector_4292802460
+	sym = strutConnector_4292801736
+	sym = strutConnector_4292801012
+	srfN = srfAttach,fuelTank1-2_4292804572
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = radialDecoupler2_4292816784
+	partName = Part
+	pos = -24.46338,19.55662,-10.71863
+	rot = 0,-0.2588192,0,-0.9659259
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 6
+	sidx = 2
+	sqor = 7
+	attm = 1
+	link = fuelTank1-2_4292803848
+	sym = radialDecoupler2_4292818144
+	sym = radialDecoupler2_4292817464
+	sym = radialDecoupler2_4292816104
+	sym = radialDecoupler2_4292815424
+	sym = radialDecoupler2_4292814744
+	srfN = srfAttach,fuelTank1-2_4292818280
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292803848
+	partName = Part
+	pos = -26.08039,19.46286,-9.785052
+	rot = 0,-0.2588193,0,-0.9659259
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank1-2_4292803816
+	link = strutConnector_4292803364
+	link = strutConnector_4292803304
+	link = strutConnector_4292803244
+	link = strutConnector_4292803184
+	sym = fuelTank1-2_4292817420
+	sym = fuelTank1-2_4292804572
+	sym = fuelTank1-2_4292803124
+	sym = fuelTank1-2_4292802400
+	sym = fuelTank1-2_4292801676
+	srfN = srfAttach,radialDecoupler2_4292816784
+	attN = bottom,fuelTank1-2_4292803816
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292803816
+	partName = Part
+	pos = -26.08039,15.71286,-9.785052
+	rot = 0,0.8660257,0,0.4999998
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = engineLargeSkipper_4292803784
+	link = strutConnector_4292803604
+	link = strutConnector_4292803544
+	link = strutConnector_4292803484
+	link = strutConnector_4292803424
+	sym = fuelTank1-2_4292817392
+	sym = fuelTank1-2_4292804540
+	sym = fuelTank1-2_4292803092
+	sym = fuelTank1-2_4292802368
+	sym = fuelTank1-2_4292801644
+	attN = top,fuelTank1-2_4292803848
+	attN = bottom,engineLargeSkipper_4292803784
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = engineLargeSkipper_4292803784
+	partName = Part
+	pos = -26.08039,13.83786,-9.785052
+	rot = 0,0.5000002,0,0.8660255
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 8
+	dstg = 7
+	sidx = 1
+	sqor = 8
+	attm = 0
+	sym = engineLargeSkipper_4292817364
+	sym = engineLargeSkipper_4292804508
+	sym = engineLargeSkipper_4292803060
+	sym = engineLargeSkipper_4292802336
+	sym = engineLargeSkipper_4292801612
+	attN = top,fuelTank1-2_4292803816
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4292803604
+	partName = StrutConnector
+	pos = -26.94949,14.11982,-10.65416
+	rot = 2.961156E-08,-0.3826832,-1.105121E-07,0.9238797
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.273558,0.03167699,-0.9965909; dir: -0.7873859,0.01958909,-0.6161491
+	sym = strutConnector_4292817232
+	sym = strutConnector_4292804328
+	sym = strutConnector_4292802880
+	sym = strutConnector_4292802156
+	sym = strutConnector_4292801432
+	srfN = srfAttach,fuelTank1-2_4292803816
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292803544
+	partName = StrutConnector
+	pos = -26.68417,14.9454,-10.83084
+	rot = 0,-0.4999998,0,0.8660257
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.563191,0.08010101,-0.3149005; dir: -0.9790721,0.05017341,-0.197232
+	sym = strutConnector_4292817176
+	sym = strutConnector_4292804268
+	sym = strutConnector_4292802820
+	sym = strutConnector_4292802096
+	sym = strutConnector_4292801372
+	srfN = srfAttach,fuelTank1-2_4292803816
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292803484
+	partName = StrutConnector
+	pos = -26.6841,15.91096,-10.83074
+	rot = 0,-0.4999998,0,0.8660257
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.258016,0.1003952,-0.3148973; dir: -0.9671765,0.0771936,-0.2420966
+	sym = strutConnector_4292817120
+	sym = strutConnector_4292804208
+	sym = strutConnector_4292802760
+	sym = strutConnector_4292802036
+	sym = strutConnector_4292801312
+	srfN = srfAttach,fuelTank1-2_4292803816
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292803424
+	partName = StrutConnector
+	pos = -26.94446,17.10505,-10.64913
+	rot = 2.563909E-07,-0.3826832,-4.440811E-07,0.9238797
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.065581,-0.07921721,-0.9389613; dir: -0.749113,-0.05568823,-0.6600974
+	sym = strutConnector_4292817064
+	sym = strutConnector_4292804148
+	sym = strutConnector_4292802700
+	sym = strutConnector_4292801976
+	sym = strutConnector_4292801252
+	srfN = srfAttach,fuelTank1-2_4292803816
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292803364
+	partName = StrutConnector
+	pos = -27.13357,18.07629,-10.39311
+	rot = 0,-0.2588189,0,0.9659261
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.5848939,-0.2019806,-1.429316; dir: -0.3755311,-0.1296772,-0.9176928
+	sym = strutConnector_4292817008
+	sym = strutConnector_4292804088
+	sym = strutConnector_4292802640
+	sym = strutConnector_4292801916
+	sym = strutConnector_4292801192
+	srfN = srfAttach,fuelTank1-2_4292803848
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292803304
+	partName = StrutConnector
+	pos = -27.12733,18.83921,-10.38951
+	rot = 0,-0.2588189,0,0.9659261
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.9134224,-0.05320454,-1.58895; dir: -0.4981692,-0.02901542,-0.8665941
+	sym = strutConnector_4292816952
+	sym = strutConnector_4292804028
+	sym = strutConnector_4292802580
+	sym = strutConnector_4292801856
+	sym = strutConnector_4292801132
+	srfN = srfAttach,fuelTank1-2_4292803848
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292803244
+	partName = StrutConnector
+	pos = -26.9423,19.79276,-10.64696
+	rot = 2.622953E-07,-0.3826833,-9.789001E-07,0.9238797
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.130473,0.08851136,-0.955531; dir: -0.7623655,0.05969351,-0.6443877
+	sym = strutConnector_4292816896
+	sym = strutConnector_4292803968
+	sym = strutConnector_4292802520
+	sym = strutConnector_4292801796
+	sym = strutConnector_4292801072
+	srfN = srfAttach,fuelTank1-2_4292803848
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292803184
+	partName = StrutConnector
+	pos = -27.13501,20.90525,-10.39394
+	rot = 0,-0.2588189,0,0.9659261
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.5499181,0.08755779,-1.429309; dir: -0.3584978,0.05708195,-0.9317838
+	sym = strutConnector_4292816840
+	sym = strutConnector_4292803908
+	sym = strutConnector_4292802460
+	sym = strutConnector_4292801736
+	sym = strutConnector_4292801012
+	srfN = srfAttach,fuelTank1-2_4292803848
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = radialDecoupler2_4292816104
+	partName = Part
+	pos = -23.44366,19.55662,-10.12989
+	rot = 0,-0.7071069,0,-0.7071067
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 6
+	sidx = 3
+	sqor = 7
+	attm = 1
+	link = fuelTank1-2_4292803124
+	sym = radialDecoupler2_4292818144
+	sym = radialDecoupler2_4292817464
+	sym = radialDecoupler2_4292816784
+	sym = radialDecoupler2_4292815424
+	sym = radialDecoupler2_4292814744
+	srfN = srfAttach,fuelTank1-2_4292818280
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292803124
+	partName = Part
+	pos = -23.44366,19.46286,-8.262736
+	rot = 0,-0.7071069,0,-0.7071066
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank1-2_4292803092
+	link = strutConnector_4292802640
+	link = strutConnector_4292802580
+	link = strutConnector_4292802520
+	link = strutConnector_4292802460
+	sym = fuelTank1-2_4292817420
+	sym = fuelTank1-2_4292804572
+	sym = fuelTank1-2_4292803848
+	sym = fuelTank1-2_4292802400
+	sym = fuelTank1-2_4292801676
+	srfN = srfAttach,radialDecoupler2_4292816104
+	attN = bottom,fuelTank1-2_4292803092
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292803092
+	partName = Part
+	pos = -23.44366,15.71286,-8.262736
+	rot = 0,1,0,-3.371748E-07
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = engineLargeSkipper_4292803060
+	link = strutConnector_4292802880
+	link = strutConnector_4292802820
+	link = strutConnector_4292802760
+	link = strutConnector_4292802700
+	sym = fuelTank1-2_4292817392
+	sym = fuelTank1-2_4292804540
+	sym = fuelTank1-2_4292803816
+	sym = fuelTank1-2_4292802368
+	sym = fuelTank1-2_4292801644
+	attN = top,fuelTank1-2_4292803124
+	attN = bottom,engineLargeSkipper_4292803060
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = engineLargeSkipper_4292803060
+	partName = Part
+	pos = -23.44366,13.83786,-8.262736
+	rot = 0,0.8660256,0,0.4999999
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 8
+	dstg = 7
+	sidx = 1
+	sqor = 8
+	attm = 0
+	sym = engineLargeSkipper_4292817364
+	sym = engineLargeSkipper_4292804508
+	sym = engineLargeSkipper_4292803784
+	sym = engineLargeSkipper_4292802336
+	sym = engineLargeSkipper_4292801612
+	attN = top,fuelTank1-2_4292803092
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4292802880
+	partName = StrutConnector
+	pos = -24.63089,14.11982,-7.944627
+	rot = -2.961166E-08,0.1305264,-1.10512E-07,0.9914449
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.273572,0.03167699,-0.9965981; dir: -0.7873859,0.01958909,-0.6161491
+	sym = strutConnector_4292817232
+	sym = strutConnector_4292804328
+	sym = strutConnector_4292803604
+	sym = strutConnector_4292802156
+	sym = strutConnector_4292801432
+	srfN = srfAttach,fuelTank1-2_4292803092
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292802820
+	partName = StrutConnector
+	pos = -24.65124,14.9454,-8.262739
+	rot = 0,3.371748E-07,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.563223,0.08010864,-0.3149057; dir: -0.9790721,0.05017341,-0.197232
+	sym = strutConnector_4292817176
+	sym = strutConnector_4292804268
+	sym = strutConnector_4292803544
+	sym = strutConnector_4292802096
+	sym = strutConnector_4292801372
+	srfN = srfAttach,fuelTank1-2_4292803092
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292802760
+	partName = StrutConnector
+	pos = -24.65111,15.91096,-8.262743
+	rot = 0,3.371748E-07,0,1
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.258039,0.1004105,-0.3149032; dir: -0.9671765,0.0771936,-0.2420966
+	sym = strutConnector_4292817120
+	sym = strutConnector_4292804208
+	sym = strutConnector_4292803484
+	sym = strutConnector_4292802036
+	sym = strutConnector_4292801312
+	srfN = srfAttach,fuelTank1-2_4292803092
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292802700
+	partName = StrutConnector
+	pos = -24.62402,17.10505,-7.946468
+	rot = 5.380792E-13,0.1305264,-5.12781E-07,0.9914449
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.065592,-0.07921721,-0.9389696; dir: -0.749113,-0.05568823,-0.6600974
+	sym = strutConnector_4292817064
+	sym = strutConnector_4292804148
+	sym = strutConnector_4292803424
+	sym = strutConnector_4292801976
+	sym = strutConnector_4292801252
+	srfN = srfAttach,fuelTank1-2_4292803092
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292802640
+	partName = StrutConnector
+	pos = -24.49685,18.07629,-7.654681
+	rot = 0,0.2588193,0,0.9659259
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.5848973,-0.2019806,-1.429321; dir: -0.3755311,-0.1296772,-0.9176928
+	sym = strutConnector_4292817008
+	sym = strutConnector_4292804088
+	sym = strutConnector_4292803364
+	sym = strutConnector_4292801916
+	sym = strutConnector_4292801192
+	srfN = srfAttach,fuelTank1-2_4292803124
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292802580
+	partName = StrutConnector
+	pos = -24.49061,18.83921,-7.658281
+	rot = 0,0.2588193,0,0.9659259
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.9134279,-0.05320454,-1.588959; dir: -0.4981692,-0.02901542,-0.8665941
+	sym = strutConnector_4292816952
+	sym = strutConnector_4292804028
+	sym = strutConnector_4292803304
+	sym = strutConnector_4292801856
+	sym = strutConnector_4292801132
+	srfN = srfAttach,fuelTank1-2_4292803124
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292802520
+	partName = StrutConnector
+	pos = -24.62105,19.79276,-7.947256
+	rot = -2.622956E-07,0.1305264,-9.788999E-07,0.9914448
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.130485,0.08851898,-0.9555389; dir: -0.7623655,0.05969351,-0.6443877
+	sym = strutConnector_4292816896
+	sym = strutConnector_4292803968
+	sym = strutConnector_4292803244
+	sym = strutConnector_4292801796
+	sym = strutConnector_4292801072
+	srfN = srfAttach,fuelTank1-2_4292803124
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292802460
+	partName = StrutConnector
+	pos = -24.49829,20.90525,-7.653847
+	rot = 0,0.2588193,0,0.9659259
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.54992,0.08756542,-1.429315; dir: -0.3584978,0.05708195,-0.9317838
+	sym = strutConnector_4292816840
+	sym = strutConnector_4292803908
+	sym = strutConnector_4292803184
+	sym = strutConnector_4292801736
+	sym = strutConnector_4292801012
+	srfN = srfAttach,fuelTank1-2_4292803124
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = radialDecoupler2_4292815424
+	partName = Part
+	pos = -22.42394,19.55662,-10.71863
+	rot = 0,-0.9659259,0,-0.2588189
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 6
+	sidx = 4
+	sqor = 7
+	attm = 1
+	link = fuelTank1-2_4292802400
+	sym = radialDecoupler2_4292818144
+	sym = radialDecoupler2_4292817464
+	sym = radialDecoupler2_4292816784
+	sym = radialDecoupler2_4292816104
+	sym = radialDecoupler2_4292814744
+	srfN = srfAttach,fuelTank1-2_4292818280
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292802400
+	partName = Part
+	pos = -20.80694,19.46286,-9.785054
+	rot = 0,-0.9659259,0,-0.2588188
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank1-2_4292802368
+	link = strutConnector_4292801916
+	link = strutConnector_4292801856
+	link = strutConnector_4292801796
+	link = strutConnector_4292801736
+	sym = fuelTank1-2_4292817420
+	sym = fuelTank1-2_4292804572
+	sym = fuelTank1-2_4292803848
+	sym = fuelTank1-2_4292803124
+	sym = fuelTank1-2_4292801676
+	srfN = srfAttach,radialDecoupler2_4292815424
+	attN = bottom,fuelTank1-2_4292802368
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292802368
+	partName = Part
+	pos = -20.80694,15.71286,-9.785054
+	rot = 0,0.8660253,0,-0.5000004
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = engineLargeSkipper_4292802336
+	link = strutConnector_4292802156
+	link = strutConnector_4292802096
+	link = strutConnector_4292802036
+	link = strutConnector_4292801976
+	sym = fuelTank1-2_4292817392
+	sym = fuelTank1-2_4292804540
+	sym = fuelTank1-2_4292803816
+	sym = fuelTank1-2_4292803092
+	sym = fuelTank1-2_4292801644
+	attN = top,fuelTank1-2_4292802400
+	attN = bottom,engineLargeSkipper_4292802336
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = engineLargeSkipper_4292802336
+	partName = Part
+	pos = -20.80694,13.83786,-9.785054
+	rot = 0,1,0,-1.86081E-07
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 8
+	dstg = 7
+	sidx = 1
+	sqor = 8
+	attm = 0
+	sym = engineLargeSkipper_4292817364
+	sym = engineLargeSkipper_4292804508
+	sym = engineLargeSkipper_4292803784
+	sym = engineLargeSkipper_4292803060
+	sym = engineLargeSkipper_4292801612
+	attN = top,fuelTank1-2_4292802368
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4292802156
+	partName = StrutConnector
+	pos = -21.12506,14.11982,-8.597835
+	rot = -8.090046E-08,0.6087617,-8.090039E-08,0.7933532
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.273557,0.03168461,-0.9965875; dir: -0.7873859,0.01958909,-0.6161491
+	sym = strutConnector_4292817232
+	sym = strutConnector_4292804328
+	sym = strutConnector_4292803604
+	sym = strutConnector_4292802880
+	sym = strutConnector_4292801432
+	srfN = srfAttach,fuelTank1-2_4292802368
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292802096
+	partName = StrutConnector
+	pos = -21.41073,14.9454,-8.739264
+	rot = 0,0.5000004,0,0.8660253
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.563187,0.08010101,-0.3149001; dir: -0.9790721,0.05017341,-0.197232
+	sym = strutConnector_4292817176
+	sym = strutConnector_4292804268
+	sym = strutConnector_4292803544
+	sym = strutConnector_4292802820
+	sym = strutConnector_4292801372
+	srfN = srfAttach,fuelTank1-2_4292802368
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292802036
+	partName = StrutConnector
+	pos = -21.41067,15.91096,-8.739375
+	rot = 0,0.5000004,0,0.8660253
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.258011,0.1004028,-0.3148954; dir: -0.9671765,0.0771936,-0.2420966
+	sym = strutConnector_4292817120
+	sym = strutConnector_4292804208
+	sym = strutConnector_4292803484
+	sym = strutConnector_4292802760
+	sym = strutConnector_4292801312
+	srfN = srfAttach,fuelTank1-2_4292802368
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801976
+	partName = StrutConnector
+	pos = -21.12322,17.10505,-8.604705
+	rot = -2.5639E-07,0.6087617,-4.440816E-07,0.7933532
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.065579,-0.07921721,-0.938957; dir: -0.749113,-0.05568823,-0.6600974
+	sym = strutConnector_4292817064
+	sym = strutConnector_4292804148
+	sym = strutConnector_4292803424
+	sym = strutConnector_4292802700
+	sym = strutConnector_4292801252
+	srfN = srfAttach,fuelTank1-2_4292802368
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801916
+	partName = StrutConnector
+	pos = -20.80694,18.07629,-8.568944
+	rot = 0,0.707107,0,0.7071067
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.5848939,-0.201973,-1.429318; dir: -0.3755311,-0.1296772,-0.9176928
+	sym = strutConnector_4292817008
+	sym = strutConnector_4292804088
+	sym = strutConnector_4292803364
+	sym = strutConnector_4292802640
+	sym = strutConnector_4292801192
+	srfN = srfAttach,fuelTank1-2_4292802400
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801856
+	partName = StrutConnector
+	pos = -20.80694,18.83921,-8.576144
+	rot = 0,0.707107,0,0.7071067
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.9134205,-0.05319691,-1.588948; dir: -0.4981692,-0.02901542,-0.8665941
+	sym = strutConnector_4292816952
+	sym = strutConnector_4292804028
+	sym = strutConnector_4292803304
+	sym = strutConnector_4292802580
+	sym = strutConnector_4292801132
+	srfN = srfAttach,fuelTank1-2_4292802400
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801796
+	partName = StrutConnector
+	pos = -21.12242,19.79276,-8.607665
+	rot = -7.166047E-07,0.6087616,-7.166044E-07,0.7933532
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.13047,0.08851136,-0.9555292; dir: -0.7623655,0.05969351,-0.6443877
+	sym = strutConnector_4292816896
+	sym = strutConnector_4292803968
+	sym = strutConnector_4292803244
+	sym = strutConnector_4292802520
+	sym = strutConnector_4292801072
+	srfN = srfAttach,fuelTank1-2_4292802400
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801736
+	partName = StrutConnector
+	pos = -20.80694,20.90525,-8.567275
+	rot = 0,0.707107,0,0.7071067
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.5499189,0.08756542,-1.429312; dir: -0.3584978,0.05708195,-0.9317838
+	sym = strutConnector_4292816840
+	sym = strutConnector_4292803908
+	sym = strutConnector_4292803184
+	sym = strutConnector_4292802460
+	sym = strutConnector_4292801012
+	srfN = srfAttach,fuelTank1-2_4292802400
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = radialDecoupler2_4292814744
+	partName = Part
+	pos = -22.42394,19.55662,-11.8961
+	rot = 0,-0.9659259,0,0.2588191
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 6
+	sidx = 5
+	sqor = 7
+	attm = 1
+	link = fuelTank1-2_4292801676
+	sym = radialDecoupler2_4292818144
+	sym = radialDecoupler2_4292817464
+	sym = radialDecoupler2_4292816784
+	sym = radialDecoupler2_4292816104
+	sym = radialDecoupler2_4292815424
+	srfN = srfAttach,fuelTank1-2_4292818280
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleAnchoredDecoupler
+		isEnabled = True
+		isDecoupled = False
+		EVENTS
+		{
+			Decouple
+			{
+				active = True
+				guiActive = True
+				guiIcon = Decouple
+				guiName = Decouple
+				category = Decouple
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			DecoupleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292801676
+	partName = Part
+	pos = -20.80694,19.46286,-12.82968
+	rot = 0,-0.9659259,0,0.2588192
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	link = fuelTank1-2_4292801644
+	link = strutConnector_4292801192
+	link = strutConnector_4292801132
+	link = strutConnector_4292801072
+	link = strutConnector_4292801012
+	sym = fuelTank1-2_4292817420
+	sym = fuelTank1-2_4292804572
+	sym = fuelTank1-2_4292803848
+	sym = fuelTank1-2_4292803124
+	sym = fuelTank1-2_4292802400
+	srfN = srfAttach,radialDecoupler2_4292814744
+	attN = bottom,fuelTank1-2_4292801644
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = fuelTank1-2_4292801644
+	partName = Part
+	pos = -20.80694,15.71286,-12.82968
+	rot = 0,0.4999998,0,-0.8660256
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 0
+	link = engineLargeSkipper_4292801612
+	link = strutConnector_4292801432
+	link = strutConnector_4292801372
+	link = strutConnector_4292801312
+	link = strutConnector_4292801252
+	sym = fuelTank1-2_4292817392
+	sym = fuelTank1-2_4292804540
+	sym = fuelTank1-2_4292803816
+	sym = fuelTank1-2_4292803092
+	sym = fuelTank1-2_4292802368
+	attN = top,fuelTank1-2_4292801676
+	attN = bottom,engineLargeSkipper_4292801612
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	RESOURCE
+	{
+		name = LiquidFuel
+		amount = 1440
+		maxAmount = 1440
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Oxidizer
+		amount = 1760
+		maxAmount = 1760
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		flowMode = Both
+	}
+}
+PART
+{
+	part = engineLargeSkipper_4292801612
+	partName = Part
+	pos = -20.80694,13.83786,-12.82968
+	rot = 0,0.8660255,0,-0.5000002
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 8
+	dstg = 7
+	sidx = 1
+	sqor = 8
+	attm = 0
+	sym = engineLargeSkipper_4292817364
+	sym = engineLargeSkipper_4292804508
+	sym = engineLargeSkipper_4292803784
+	sym = engineLargeSkipper_4292803060
+	sym = engineLargeSkipper_4292802336
+	attN = top,fuelTank1-2_4292801644
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	MODULE
+	{
+		name = ModuleEngines
+		isEnabled = True
+		staged = False
+		flameout = False
+		EngineIgnited = False
+		engineShutdown = False
+		currentThrottle = 0
+		thrustPercentage = 100
+		manuallyOverridden = False
+		thrustPercentage_UIFlight
+		{
+			controlEnabled = True
+			minValue = 0
+			maxValue = 100
+			stepIncrement = 0.5
+		}
+		EVENTS
+		{
+			Activate
+			{
+				active = True
+				guiActive = True
+				guiIcon = Activate Engine
+				guiName = Activate Engine
+				category = Activate Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			Shutdown
+			{
+				active = False
+				guiActive = True
+				guiIcon = Shutdown Engine
+				guiName = Shutdown Engine
+				category = Shutdown Engine
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			OnAction
+			{
+				actionGroup = None
+			}
+			ShutdownAction
+			{
+				actionGroup = None
+			}
+			ActivateAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleJettison
+		isEnabled = True
+		EVENTS
+		{
+			Jettison
+			{
+				active = False
+				guiActive = True
+				guiIcon = Jettison
+				guiName = Jettison
+				category = Jettison
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			JettisonAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleGimbal
+		isEnabled = True
+		gimbalLock = False
+		EVENTS
+		{
+			LockGimbal
+			{
+				active = True
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Lock Gimbal
+				guiName = Lock Gimbal
+				category = Lock Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+			FreeGimbal
+			{
+				active = False
+				guiActive = True
+				guiActiveEditor = True
+				guiIcon = Free Gimbal
+				guiName = Free Gimbal
+				category = Free Gimbal
+				guiActiveUnfocused = False
+				unfocusedRange = 2
+				externalToEVAOnly = True
+			}
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateHeat
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAlternator
+		isEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 0
+		maxAmount = 0
+		flowState = True
+		isTweakable = False
+		hideFlow = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4292801432
+	partName = StrutConnector
+	pos = -19.93784,14.11982,-11.96057
+	rot = -1.105121E-07,0.9238797,-2.961157E-08,0.3826833
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.273564,0.03168461,-0.9965904; dir: -0.7873859,0.01958909,-0.6161491
+	sym = strutConnector_4292817232
+	sym = strutConnector_4292804328
+	sym = strutConnector_4292803604
+	sym = strutConnector_4292802880
+	sym = strutConnector_4292802156
+	srfN = srfAttach,fuelTank1-2_4292801644
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801372
+	partName = StrutConnector
+	pos = -20.20316,14.9454,-11.78388
+	rot = 0,0.8660256,0,0.4999998
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.563199,0.08010101,-0.3149005; dir: -0.9790721,0.05017341,-0.197232
+	sym = strutConnector_4292817176
+	sym = strutConnector_4292804268
+	sym = strutConnector_4292803544
+	sym = strutConnector_4292802820
+	sym = strutConnector_4292802096
+	srfN = srfAttach,fuelTank1-2_4292801644
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801312
+	partName = StrutConnector
+	pos = -20.20322,15.91096,-11.78399
+	rot = 0,0.8660256,0,0.4999998
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.258021,0.1004028,-0.3148953; dir: -0.9671765,0.0771936,-0.2420966
+	sym = strutConnector_4292817120
+	sym = strutConnector_4292804208
+	sym = strutConnector_4292803484
+	sym = strutConnector_4292802760
+	sym = strutConnector_4292802036
+	srfN = srfAttach,fuelTank1-2_4292801644
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801252
+	partName = StrutConnector
+	pos = -19.94287,17.10505,-11.96559
+	rot = -4.440811E-07,0.9238797,-2.56391E-07,0.3826833
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.065584,-0.07921721,-0.9389588; dir: -0.749113,-0.05568823,-0.6600974
+	sym = strutConnector_4292817064
+	sym = strutConnector_4292804148
+	sym = strutConnector_4292803424
+	sym = strutConnector_4292802700
+	sym = strutConnector_4292801976
+	srfN = srfAttach,fuelTank1-2_4292801644
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801192
+	partName = StrutConnector
+	pos = -19.75376,18.07629,-12.22162
+	rot = 0,0.965926,0,0.258819
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.5848967,-0.2019806,-1.429316; dir: -0.3755311,-0.1296772,-0.9176928
+	sym = strutConnector_4292817008
+	sym = strutConnector_4292804088
+	sym = strutConnector_4292803364
+	sym = strutConnector_4292802640
+	sym = strutConnector_4292801916
+	srfN = srfAttach,fuelTank1-2_4292801676
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801132
+	partName = StrutConnector
+	pos = -19.75999,18.83921,-12.22522
+	rot = 0,0.965926,0,0.258819
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.9134257,-0.05320454,-1.588951; dir: -0.4981692,-0.02901542,-0.8665941
+	sym = strutConnector_4292816952
+	sym = strutConnector_4292804028
+	sym = strutConnector_4292803304
+	sym = strutConnector_4292802580
+	sym = strutConnector_4292801856
+	srfN = srfAttach,fuelTank1-2_4292801676
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801072
+	partName = StrutConnector
+	pos = -19.94503,19.79276,-11.96777
+	rot = -9.789001E-07,0.9238796,-2.622954E-07,0.3826833
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -1.130476,0.08851136,-0.9555299; dir: -0.7623655,0.05969351,-0.6443877
+	sym = strutConnector_4292816896
+	sym = strutConnector_4292803968
+	sym = strutConnector_4292803244
+	sym = strutConnector_4292802520
+	sym = strutConnector_4292801796
+	srfN = srfAttach,fuelTank1-2_4292801676
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
+PART
+{
+	part = strutConnector_4292801012
+	partName = StrutConnector
+	pos = -19.75231,20.90525,-12.22079
+	rot = 0,0.965926,0,0.258819
+	attRot = 0,0,0,1
+	mir = 1,1,1
+	istg = 7
+	dstg = 7
+	sidx = -1
+	sqor = -1
+	attm = 1
+	cData = tgt: fuelTank1-2_-1; pos: -0.5499203,0.08755779,-1.429308; dir: -0.3584978,0.05708195,-0.9317838
+	sym = strutConnector_4292816840
+	sym = strutConnector_4292803908
+	sym = strutConnector_4292803184
+	sym = strutConnector_4292802460
+	sym = strutConnector_4292801736
+	srfN = srfAttach,fuelTank1-2_4292801676
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+}
