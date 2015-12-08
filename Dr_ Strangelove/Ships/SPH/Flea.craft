@@ -4,7 +4,7 @@ description =
 type = SPH
 PART
 {
-	part = Mark2Cockpit_4293508530
+	part = Mark2Cockpit_4294273378
 	partName = Part
 	pos = 0.304875,5.773913,-0.3777066
 	rot = 0.7071068,0,0,0.7071068
@@ -16,12 +16,12 @@ PART
 	sqor = -1
 	attm = 0
 	modCost = 0
-	link = MK1Fuselage_4293508422
-	link = FSfighterTailGear_4293507854
-	link = FSfighterTailGear_4293507756
-	link = shockConeIntake_4293507338
-	attN = top,shockConeIntake_4293507338
-	attN = bottom,MK1Fuselage_4293508422
+	link = MK1Fuselage_4294273236
+	link = FSfighterTailGear_4294272668
+	link = FSfighterTailGear_4294272570
+	link = shockConeIntake_4294235462
+	attN = top,shockConeIntake_4294235462
+	attN = bottom,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -255,17 +255,6 @@ PART
 	}
 	MODULE
 	{
-		name = JSINonTransparentPod
-		isEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-	}
-	MODULE
-	{
 		name = ModuleTripLogger
 		isEnabled = True
 		EVENTS
@@ -313,7 +302,7 @@ PART
 }
 PART
 {
-	part = MK1Fuselage_4293508422
+	part = MK1Fuselage_4294273236
 	partName = Part
 	pos = 0.304875,5.773913,-2.283957
 	rot = 0.7071068,0,0,0.7071068
@@ -325,27 +314,27 @@ PART
 	sqor = -1
 	attm = 0
 	modCost = 0
-	link = turboFanEngine_4293508388
-	link = airScoop_4293508302
-	link = airScoop_4293508270
-	link = airScoop_4293508238
-	link = airScoop_4293508206
-	link = airScoop_4293508174
-	link = airScoop_4293508142
-	link = airScoop_4293508110
-	link = airScoop_4293508078
-	link = airScoop_4293508046
-	link = airScoop_4293508014
-	link = airScoop_4293507982
-	link = airScoop_4293507950
-	link = airScoop_4293507918
-	link = airScoop_4293507886
-	link = FSfighterTailGear_4293507658
-	link = FSfighterTailGear_4293507560
-	link = structuralWing_4293507462
-	link = structuralWing_4293507400
-	attN = top,Mark2Cockpit_4293508530
-	attN = bottom,turboFanEngine_4293508388
+	link = turboFanEngine_4294273202
+	link = airScoop_4294273116
+	link = airScoop_4294273084
+	link = airScoop_4294273052
+	link = airScoop_4294273020
+	link = airScoop_4294272988
+	link = airScoop_4294272956
+	link = airScoop_4294272924
+	link = airScoop_4294272892
+	link = airScoop_4294272860
+	link = airScoop_4294272828
+	link = airScoop_4294272796
+	link = airScoop_4294272764
+	link = airScoop_4294272732
+	link = airScoop_4294272700
+	link = FSfighterTailGear_4294272472
+	link = FSfighterTailGear_4294272374
+	link = structuralWing_4294272276
+	link = structuralWing_4294272214
+	attN = top,Mark2Cockpit_4294273378
+	attN = bottom,turboFanEngine_4294273202
 	EVENTS
 	{
 	}
@@ -365,9 +354,9 @@ PART
 }
 PART
 {
-	part = turboFanEngine_4293508388
+	part = turboFanEngine_4294273202
 	partName = Part
-	pos = 0.304875,5.773913,-4.621469
+	pos = 0.304875,5.773913,-4.621468
 	rot = 0.7071068,0,0,0.7071068
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -377,7 +366,7 @@ PART
 	sqor = -1
 	attm = 0
 	modCost = 0
-	attN = top,MK1Fuselage_4293508422
+	attN = top,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -540,9 +529,9 @@ PART
 }
 PART
 {
-	part = airScoop_4293508302
+	part = airScoop_4294273116
 	partName = Part
-	pos = 0.05791354,6.695586,-3.167966
+	pos = 0.05791354,6.695586,-3.167965
 	rot = -6.284622E-05,0.0003585433,0.9914449,-0.1305262
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -552,8 +541,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293508270
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294273084
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -611,9 +600,9 @@ PART
 }
 PART
 {
-	part = airScoop_4293508270
+	part = airScoop_4294273084
 	partName = Part
-	pos = 0.5518366,6.695586,-3.167966
+	pos = 0.5518366,6.695586,-3.167965
 	rot = 6.284622E-05,0.0003585433,0.9914449,0.1305262
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -623,8 +612,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293508302
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294273116
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -682,9 +671,9 @@ PART
 }
 PART
 {
-	part = airScoop_4293508238
+	part = airScoop_4294273052
 	partName = Part
-	pos = 0.88267,6.534191,-3.185341
+	pos = 0.88267,6.534191,-3.18534
 	rot = -0.0002340941,-0.0006432874,0.9396927,0.3420197
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -694,8 +683,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293508206
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294273020
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -753,9 +742,9 @@ PART
 }
 PART
 {
-	part = airScoop_4293508206
+	part = airScoop_4294273020
 	partName = Part
-	pos = -0.27292,6.534191,-3.185341
+	pos = -0.27292,6.534191,-3.18534
 	rot = 0.0002340941,-0.0006432874,0.9396927,-0.3420197
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -765,8 +754,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293508238
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294273052
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -824,9 +813,9 @@ PART
 }
 PART
 {
-	part = airScoop_4293508174
+	part = airScoop_4294272988
 	partName = Part
-	pos = 0.9747659,6.456843,-3.146181
+	pos = 0.9747659,6.456843,-3.14618
 	rot = -0.0002340941,-0.0006432874,0.9396927,0.3420197
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -836,8 +825,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293508142
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294272956
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -895,9 +884,9 @@ PART
 }
 PART
 {
-	part = airScoop_4293508142
+	part = airScoop_4294272956
 	partName = Part
-	pos = -0.3650158,6.456843,-3.146181
+	pos = -0.3650158,6.456843,-3.14618
 	rot = 0.0002340941,-0.0006432874,0.9396927,-0.3420197
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -907,8 +896,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293508174
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294272988
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -966,7 +955,7 @@ PART
 }
 PART
 {
-	part = airScoop_4293508110
+	part = airScoop_4294272924
 	partName = Part
 	pos = 1.227595,5.513082,-2.961782
 	rot = -0.0008031504,-0.0006739914,0.642787,0.7660444
@@ -978,8 +967,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293508078
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294272892
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -1037,7 +1026,7 @@ PART
 }
 PART
 {
-	part = airScoop_4293508078
+	part = airScoop_4294272892
 	partName = Part
 	pos = -0.6178446,5.513082,-2.961782
 	rot = -0.0008031504,0.0006739914,-0.642787,0.7660444
@@ -1049,8 +1038,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293508110
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294272924
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -1108,9 +1097,9 @@ PART
 }
 PART
 {
-	part = airScoop_4293508046
+	part = airScoop_4294272860
 	partName = Part
-	pos = 0.9548018,5.074596,-2.942027
+	pos = 0.9548018,5.074596,-2.942026
 	rot = -0.0006429502,-0.0002340625,0.34202,0.9396925
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -1120,8 +1109,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293508014
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294272828
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -1179,9 +1168,9 @@ PART
 }
 PART
 {
-	part = airScoop_4293508014
+	part = airScoop_4294272828
 	partName = Part
-	pos = -0.3450517,5.074596,-2.942027
+	pos = -0.3450517,5.074596,-2.942026
 	rot = -0.0006429502,0.0002340625,-0.3420201,0.9396925
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -1191,8 +1180,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293508046
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294272860
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -1250,9 +1239,9 @@ PART
 }
 PART
 {
-	part = airScoop_4293507982
+	part = airScoop_4294272796
 	partName = Part
-	pos = 0.5727282,4.857059,-3.107594
+	pos = 0.5727282,4.857059,-3.107593
 	rot = -0.0003583747,-6.320974E-05,0.1736483,0.9848077
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -1262,8 +1251,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293507950
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294272764
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -1321,9 +1310,9 @@ PART
 }
 PART
 {
-	part = airScoop_4293507950
+	part = airScoop_4294272764
 	partName = Part
-	pos = 0.03702193,4.857059,-3.107594
+	pos = 0.03702193,4.857059,-3.107593
 	rot = -0.0003583747,6.320974E-05,-0.1736483,0.9848077
 	attRot = 0,0,0,1
 	mir = 1,1,1
@@ -1333,8 +1322,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293507982
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294272796
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -1392,10 +1381,10 @@ PART
 }
 PART
 {
-	part = airScoop_4293507918
+	part = airScoop_4294272732
 	partName = Part
-	pos = -0.602773,6.031069,-3.131724
-	rot = -0.0006396417,0.00081335,0.7860633,-0.6181454
+	pos = -0.602773,6.031069,-3.131723
+	rot = -0.0006396417,0.00081335,0.7860632,-0.6181453
 	attRot = 0,0,0,1
 	mir = 1,1,1
 	istg = 0
@@ -1404,8 +1393,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293507886
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294272700
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -1463,10 +1452,10 @@ PART
 }
 PART
 {
-	part = airScoop_4293507886
+	part = airScoop_4294272700
 	partName = Part
-	pos = 1.212523,6.031069,-3.131724
-	rot = 0.0006396417,0.00081335,0.7860632,0.6181453
+	pos = 1.212523,6.031069,-3.131723
+	rot = 0.0006396417,0.00081335,0.7860633,0.6181454
 	attRot = 0,0,0,1
 	mir = 1,1,1
 	istg = 0
@@ -1475,8 +1464,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = airScoop_4293507918
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = airScoop_4294272732
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -1534,10 +1523,10 @@ PART
 }
 PART
 {
-	part = FSfighterTailGear_4293507854
+	part = FSfighterTailGear_4294272668
 	partName = Part
-	pos = 0.01487446,5.226499,0.1960545
-	rot = 3.371748E-07,-1.028992E-07,9.239793E-07,1
+	pos = 0.01487446,5.226499,0.1960544
+	rot = 3.371748E-07,-1.028992E-07,9.239792E-07,1
 	attRot = -6.255087E-19,0.2588191,-1.542682E-08,0.9659259
 	mir = 1,1,1
 	istg = 0
@@ -1546,8 +1535,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = FSfighterTailGear_4293507756
-	srfN = srfAttach,Mark2Cockpit_4293508530
+	sym = FSfighterTailGear_4294272570
+	srfN = srfAttach,Mark2Cockpit_4294273378
 	EVENTS
 	{
 	}
@@ -1850,10 +1839,10 @@ PART
 }
 PART
 {
-	part = FSfighterTailGear_4293507756
+	part = FSfighterTailGear_4294272570
 	partName = Part
-	pos = 0.5948755,5.226499,0.1960545
-	rot = 2.528811E-07,1.028992E-07,-9.239793E-07,1
+	pos = 0.5948755,5.226499,0.1960544
+	rot = 2.528811E-07,1.028992E-07,-9.239792E-07,1
 	attRot = 6.255087E-19,-0.2588191,1.542682E-08,0.9659259
 	mir = 1,1,1
 	istg = 0
@@ -1862,8 +1851,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = FSfighterTailGear_4293507854
-	srfN = srfAttach,Mark2Cockpit_4293508530
+	sym = FSfighterTailGear_4294272668
+	srfN = srfAttach,Mark2Cockpit_4294273378
 	EVENTS
 	{
 	}
@@ -2166,7 +2155,7 @@ PART
 }
 PART
 {
-	part = FSfighterTailGear_4293507658
+	part = FSfighterTailGear_4294272472
 	partName = Part
 	pos = 0.1309164,5.182528,-2.679935
 	rot = 0.0003474586,-0.0001095357,-0.04361898,0.9990483
@@ -2178,8 +2167,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = FSfighterTailGear_4293507560
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = FSfighterTailGear_4294272374
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -2482,7 +2471,7 @@ PART
 }
 PART
 {
-	part = FSfighterTailGear_4293507560
+	part = FSfighterTailGear_4294272374
 	partName = Part
 	pos = 0.4788336,5.182528,-2.679935
 	rot = 0.0003474586,0.0001095357,0.04361898,0.9990483
@@ -2494,8 +2483,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = FSfighterTailGear_4293507658
-	srfN = srfAttach,MK1Fuselage_4293508422
+	sym = FSfighterTailGear_4294272472
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -2798,7 +2787,7 @@ PART
 }
 PART
 {
-	part = structuralWing_4293507462
+	part = structuralWing_4294272276
 	partName = Part
 	pos = -0.3177881,5.773913,-1.574019
 	rot = -0.707019,0.0007316967,-0.000731518,-0.7071939
@@ -2810,9 +2799,9 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	link = StandardCtrlSrf_4293507430
-	sym = structuralWing_4293507400
-	srfN = srfAttach,MK1Fuselage_4293508422
+	link = StandardCtrlSrf_4294272244
+	sym = structuralWing_4294272214
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -2833,10 +2822,10 @@ PART
 }
 PART
 {
-	part = StandardCtrlSrf_4293507430
+	part = StandardCtrlSrf_4294272244
 	partName = Part
 	pos = -1.209913,5.773015,-3.372607
-	rot = -0.0006425685,0.7072833,0.7069296,0.0008206779
+	rot = -0.0006425685,0.7072833,0.7069296,0.000820678
 	attRot = 0,-0.7071068,4.214685E-08,0.7071068
 	mir = 1,1,1
 	istg = 0
@@ -2845,8 +2834,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = StandardCtrlSrf_4293507368
-	srfN = srfAttach,structuralWing_4293507462
+	sym = StandardCtrlSrf_4294272182
+	srfN = srfAttach,structuralWing_4294272276
 	EVENTS
 	{
 	}
@@ -2882,7 +2871,7 @@ PART
 }
 PART
 {
-	part = structuralWing_4293507400
+	part = structuralWing_4294272214
 	partName = Part
 	pos = 0.927538,5.773913,-1.574019
 	rot = 0.0007314868,0.7071937,0.7070192,-0.0007317277
@@ -2894,9 +2883,9 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	link = StandardCtrlSrf_4293507368
-	sym = structuralWing_4293507462
-	srfN = srfAttach,MK1Fuselage_4293508422
+	link = StandardCtrlSrf_4294272182
+	sym = structuralWing_4294272276
+	srfN = srfAttach,MK1Fuselage_4294273236
 	EVENTS
 	{
 	}
@@ -2917,7 +2906,7 @@ PART
 }
 PART
 {
-	part = StandardCtrlSrf_4293507368
+	part = StandardCtrlSrf_4294272182
 	partName = Part
 	pos = 1.819663,5.773015,-3.372607
 	rot = 0.0006425685,0.7072833,0.7069296,-0.000820678
@@ -2929,8 +2918,8 @@ PART
 	sqor = -1
 	attm = 1
 	modCost = 0
-	sym = StandardCtrlSrf_4293507430
-	srfN = srfAttach,structuralWing_4293507400
+	sym = StandardCtrlSrf_4294272244
+	srfN = srfAttach,structuralWing_4294272214
 	EVENTS
 	{
 	}
@@ -2966,7 +2955,7 @@ PART
 }
 PART
 {
-	part = shockConeIntake_4293507338
+	part = shockConeIntake_4294235462
 	partName = Part
 	pos = 0.304875,5.773913,1.184794
 	rot = 0.7071068,0,0,0.7071068
@@ -2978,7 +2967,7 @@ PART
 	sqor = -1
 	attm = 0
 	modCost = 0
-	attN = bottom,Mark2Cockpit_4293508530
+	attN = bottom,Mark2Cockpit_4294273378
 	EVENTS
 	{
 	}

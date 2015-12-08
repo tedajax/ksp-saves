@@ -1,8 +1,8 @@
 GAME
 {
 	version = 1.0.0
-	Title = To The Mun, Part 1
-	Description = This tutorial will introduce you to flights outside of Kerbin's sphere of influence, at the most basic level - flying to the Mun.
+	Title = Orbiting 101
+	Description = This training scenario covers the basics of flying a spacecraft in orbit: Essential maneuvers like raising and lowering apoapsis and periapsis nodes, and also important concepts, such as what the terms "apoapsis" and "periapsis" mean. You'll start off in a low circular orbit around Kerbin, with the Orbiter 1 training craft ready to go. 
 	linkURL = 
 	linkCaption = 
 	Mode = 3
@@ -85,9 +85,8 @@ GAME
 	}
 	SCENARIO
 	{
-		name = TutorialMunFlight1
+		name = TutorialOrbit101
 		scene = 7
-		StateName = welcome
 	}
 	SCENARIO
 	{

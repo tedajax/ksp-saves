@@ -1,6 +1,6 @@
 GAME
 {
-	version = 0.21.0
+	version = 1.0.0
 	Title = Science Basics
 	Description = In this tutorial Wernher von Kerman will walk you through the Kerbal Scientific Method, you will learn how experimentation works and why it's so cool!
 	Mode = 3 
@@ -9,11 +9,6 @@ GAME
 	flag = Squad/Flags/default
 	PARAMETERS
 	{
-		EDITOR
-		{
-			CanLeaveToSpaceCenter = True
-			CanLeaveToMainMenu = True
-		}
 		SPACECENTER
 		{
 			CanGoInVAB = False
